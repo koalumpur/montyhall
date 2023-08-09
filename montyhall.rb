@@ -9,8 +9,6 @@ class Door
   def open
     @is_open = true
   end
-
-  
 end  
 
 
@@ -52,7 +50,8 @@ class Experiment
 
   def self.run
     puts("Let's start a Monty-Hall experiment, shall we?")
-    puts("There are three doors in front of you. Behind each door you might find either a car or a goat. There are two doors with a goat behind them. Please, choose which one you would like to open.")
+    puts("There are three doors in front of you. Behind each door you might find either a car or a goat. There are two doors with a goat behind them. Once you picked a door we are going to show you one door out of the rest behind which the goat is hiding. Then you might change a door you have chosen if you'd like to. After that you will be informed if you won a.k.a. there's a car behind the door you've picked or lost a.k.a. there's a goat.")
+    puts("Please, choose which one you would like to open.")
     door1 = gets.chomp
     return if !('1'..'3').include? door1
     a = self.new
